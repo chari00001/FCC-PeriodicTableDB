@@ -19,6 +19,7 @@ if [[ -z $1 ]]
               echo "The element with atomic number $A_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $A_MASS amu. $NAME has a melting point of $MELT celsius and a boiling point of $BOIL celsius."
             done
         fi
+      
       else
         ELEMENT=$($PSQL "SELECT * FROM elements INNER JOIN properties USING(atomic_number) WHERE symbol = '$1' OR name = '$1';")
         if [[ -z $ELEMENT ]]
