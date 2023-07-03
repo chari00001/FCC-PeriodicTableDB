@@ -32,5 +32,4 @@ if [[ -z $1 ]]
             done
         fi
     fi
-    
 fi
